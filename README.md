@@ -5,6 +5,7 @@ iOS Hacker News Reader app created with [NewsAPI](https://www.newsapi.org "NewsA
 ### List of Things to Update (4/17)
 
 - [ ] Add [DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet "DZNEmptyDataSet")
+- [ ] Redesign with [ExpandableTableViewController](https://github.com/enricmacias/ExpandableTableViewController "ExpandableTableViewController")
 - [ ] remove blank space below navigation bar
 
 ![screen shot 2017-03-07 at 11 37 31 pm](https://cloud.githubusercontent.com/assets/24944725/25560763/3d8f454c-2d22-11e7-9a28-07c49e5e6ffd.png)
