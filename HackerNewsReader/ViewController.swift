@@ -7,20 +7,98 @@
 //
 
 import UIKit
+import EmptyKit
+
+ func valueForAPIKey(API_KEY:String) -> String {
+    
+    let filePath = Bundle.main.path(forResource: "Key", ofType: "plist")
+    let plist = NSDictionary(contentsOfFile: filePath!)
+    let value:String = plist?.object(forKey: API_KEY) as! String
+    
+    return value
+}
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     var articles: [Article]? = []
     
+    private let refreshControl = UIRefreshControl()
+    
+    private let refreshControlTintColor = UIColor(red:0.25, green:0.72, blue:0.85, alpha:1.0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchArticles()
+        setupView()
+        tableView.tableFooterView = UIView()
         
-    tableView.tableFooterView = UIView()
+        self.automaticallyAdjustsScrollViewInsets = false
         
-    fetchArticles()
+    // Expandable View : self.expandableTableView.expandableDelegate = self
+        
+    // EmptyKit
+    tableView.ept.dataSource = self as EmptyDataSource
+    tableView.ept.delegate = self as EmptyDelegate
+        
+   
     }
+    
+    // MARK : UIRefreshControl
+    private func setupView() {
+        setupTableView()
+        setupMessageLabel()
+        setupActivityIndicatorView()
+        
+    }
+    
+    private func updateView() {
+        let hasNews = (articles?.count)! > 0
+        tableView.isHidden = !hasNews
+        messageLabel.isHidden = hasNews
+        
+        if hasNews {
+            tableView.reloadData()
+        }
+    }
+    
+    private func setupTableView() {
+        tableView.isHidden = true
+        
+        // Helpers
+        let attributes = [ NSForegroundColorAttributeName : refreshControlTintColor ] as [String: Any]
+        
+        // Configure Refresh Control
+        refreshControl.tintColor = refreshControlTintColor
+        refreshControl.attributedTitle = NSAttributedString(string: "Fetching Hacker News Data ...", attributes: attributes)
+        refreshControl.addTarget(self, action: #selector(ViewController.refreshHackerNewsData(sender:)), for: .valueChanged)
+        
+        // Add to Table View
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
+    }
+    
+    private func setupMessageLabel() {
+        messageLabel.isHidden = true
+        messageLabel.text = "No news at this time"
+    }
+    
+    private func setupActivityIndicatorView() {
+        activityIndicatorView.startAnimating()
+    }
+    
+    // MARK: - Actions
+    func refreshHackerNewsData(sender: UIRefreshControl) {
+        fetchArticles()
+    }
+    
+    private let hackerNewsAPIKey = valueForAPIKey(API_KEY: "API_KEY")
     
     func fetchArticles() {
         let urlRequest = URLRequest(url: URL(string: "https://newsapi.org/v1/articles?source=hacker-news&sortBy=latest&apiKey=5c73eabb59b7494580fecfd7c17a0abb")!)
@@ -28,7 +106,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let task = URLSession.shared.dataTask(with: urlRequest)  { (data, response, error) in
             
         if error != nil {
-                print(error)
+                print(error!)
                 return
             }
         
@@ -53,11 +131,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
-                
+            
         
             } catch let error {
                 print(error)
             }
+            
+            self.updateView()
+            self.refreshControl.endRefreshing()
+            self.activityIndicatorView.stopAnimating()
             
 }
 
@@ -98,5 +180,44 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+}
+
+// MARK - Extension: EmptySet Extension
+
+extension UIViewController: EmptyDataSource {
+    
+    public func imageForEmpty(in view: UIView) -> UIImage? {
+        return UIImage(named: "hackernews")
+    }
+    
+    public func titleForEmpty(in view: UIView) -> NSAttributedString? {
+        let title = "No News"
+        let font = UIFont.systemFont(ofSize: 14)
+        let attributes: [String : Any] = [NSForegroundColorAttributeName: UIColor.black, NSFontAttributeName: font]
+        return NSAttributedString(string: title, attributes: attributes)
+    }
+    
+    public func buttonTitleForEmpty(forState state: UIControlState, in view: UIView) -> NSAttributedString? {
+        let title = "Empty Button"
+        let font = UIFont.systemFont(ofSize: 17)
+        let attributes: [String : Any] = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: font]
+        return NSAttributedString(string: title, attributes: attributes)
+    }
+    
+    public func buttonBackgroundColorForEmpty(in view: UIView) -> UIColor {
+        return UIColor.clear
+    }
+    
+}
+
+extension UIViewController: EmptyDelegate {
+    
+    public func emptyButton(_ button: UIButton, tappedIn view: UIView) {
+        print( #function, #line, type(of: self))
+    }
+    
+    public func emptyView(_ emptyView: UIView, tappedIn view: UIView) {
+        print( #function, #line, type(of: self))
+    }
 }
 

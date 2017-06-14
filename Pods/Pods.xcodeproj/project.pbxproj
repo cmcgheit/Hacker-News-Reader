@@ -1,0 +1,753 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05DE1EC90D94C616210EA4D530BF9E98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		0F340DF040D6B903CB11B3A2A9255F3A /* ExpandableTableViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A43AD6ABFCBB04BCA083D9067D23B87E /* ExpandableTableViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		181A93947D3E6A53AB27E7785E434C5C /* EmptyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF792F9F9C490C7C089316D7517CC48 /* EmptyDataSource.swift */; };
+		23F41C9EE401C468EF37768E29B0ED0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		4E89D1DBBD406F5A7A9721AF1EC3482B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		54016F2AB981D6FEF55C46299B60B839 /* ExpandableTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C39012E9BD73A27226A9836C0FB6A9 /* ExpandableTableViewDelegate.swift */; };
+		5BDB818981C13211FC99B195DCB9EA32 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2282C725E9DC8251E23CC0C0085D53D6 /* Empty.swift */; };
+		5CCC923C6EF900A2C9DF8E0D43AC47C6 /* Pods-HackerNewsReader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA863EE365ADE0F599A9E7C936CECFC /* Pods-HackerNewsReader-dummy.m */; };
+		6A3103BEBA71CAA47764A715A7A9A81C /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B122D87807400447E1BCBE8A3D001182 /* EmptyView.swift */; };
+		6AB06EE1B15D7CC54D0ABA09FAE8E375 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190D9485F60D310FBAADB20F49B63E41 /* ArrayExtension.swift */; };
+		71C76D755AADC7FC5C4A4CC21C8CEF00 /* ExpandableTableViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 307533F25E7A05DDD5195DA6C6863703 /* ExpandableTableViewController-dummy.m */; };
+		74962F7453CDB1CCD3ABC3DDB56B5218 /* EmptyKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D89B171002CC1BA48E56C07BABAC8762 /* EmptyKit-dummy.m */; };
+		798284F70B1F786DA70AC741E6E3188A /* Pods-HackerNewsReader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 79DC90A1A5DB8A78A899CAD240A9EDAD /* Pods-HackerNewsReader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C8F986771229A713E1A0832241670B3 /* EmptyKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 812FD91F14944CB682026FCFB00AD176 /* EmptyKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A60F63228EA97AFA228FC85CE1810CEA /* Empty+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595AC68FD508AE4B8436EB8917CD1B9C /* Empty+Extensions.swift */; };
+		BC455DC759C23FEB53CD9BFAE043ECF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		D36C12DCC8CCF959953180896B458BE9 /* EmptyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB99D75D55B73CC7BC540C7360CBA74 /* EmptyDelegate.swift */; };
+		FA9BC38CCE677FEF3954D044305D5F6F /* ExpandableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99965E3F4ED4EA20112E2434CE03194 /* ExpandableTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F76ABDCF495C821D6982701608FE864 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96AFA871D25A87F6FCCFED071D32EBC8;
+			remoteInfo = ExpandableTableViewController;
+		};
+		DE31948809A9DC3E8931852E9F73FF5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51CCB5345D64B3D772D03C8E6472DE63;
+			remoteInfo = EmptyKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05DAF598462D192BEAEA13F3644F4643 /* Pods-HackerNewsReader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-HackerNewsReader.modulemap"; sourceTree = "<group>"; };
+		1191BE182E5E0B9A16581FF97512E73A /* Pods-HackerNewsReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HackerNewsReader.release.xcconfig"; sourceTree = "<group>"; };
+		190D9485F60D310FBAADB20F49B63E41 /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = ExpandableTableViewController/Classes/ArrayExtension.swift; sourceTree = "<group>"; };
+		2282C725E9DC8251E23CC0C0085D53D6 /* Empty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Empty.swift; path = EmptyKit/Empty.swift; sourceTree = "<group>"; };
+		307533F25E7A05DDD5195DA6C6863703 /* ExpandableTableViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ExpandableTableViewController-dummy.m"; sourceTree = "<group>"; };
+		3E7F6831A8614F65AADBAB4BF03D00AB /* Pods-HackerNewsReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HackerNewsReader.debug.xcconfig"; sourceTree = "<group>"; };
+		47C39012E9BD73A27226A9836C0FB6A9 /* ExpandableTableViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableTableViewDelegate.swift; path = ExpandableTableViewController/Classes/ExpandableTableViewDelegate.swift; sourceTree = "<group>"; };
+		56B843589A93865306940EBA9ABD4CE4 /* Pods-HackerNewsReader-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HackerNewsReader-acknowledgements.markdown"; sourceTree = "<group>"; };
+		595AC68FD508AE4B8436EB8917CD1B9C /* Empty+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Empty+Extensions.swift"; path = "EmptyKit/Empty+Extensions.swift"; sourceTree = "<group>"; };
+		602A9C565F8214155FDAB11CE465D8B6 /* EmptyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EmptyKit.framework; path = EmptyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63BDA6FC8089295C2FA02AB3667B6FEB /* Pods-HackerNewsReader-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HackerNewsReader-resources.sh"; sourceTree = "<group>"; };
+		7875C91374CBE8589199551E706DCFE7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79DC90A1A5DB8A78A899CAD240A9EDAD /* Pods-HackerNewsReader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HackerNewsReader-umbrella.h"; sourceTree = "<group>"; };
+		812FD91F14944CB682026FCFB00AD176 /* EmptyKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EmptyKit-umbrella.h"; sourceTree = "<group>"; };
+		820B2DF87EA7447351A3CB7FF2D762F0 /* EmptyKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = EmptyKit.modulemap; sourceTree = "<group>"; };
+		8DA863EE365ADE0F599A9E7C936CECFC /* Pods-HackerNewsReader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HackerNewsReader-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0BBB9727AF56FE6467B7B6FF7BF3F7F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A39ABF19FD42BF6C254301A3D5987435 /* Pods-HackerNewsReader-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HackerNewsReader-frameworks.sh"; sourceTree = "<group>"; };
+		A43AD6ABFCBB04BCA083D9067D23B87E /* ExpandableTableViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ExpandableTableViewController-umbrella.h"; sourceTree = "<group>"; };
+		A542CBC652CA85C7E0B3894E24A632D7 /* ExpandableTableViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ExpandableTableViewController.modulemap; sourceTree = "<group>"; };
+		AABD77013F69565A2E991DBC77DDCA18 /* Pods_HackerNewsReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HackerNewsReader.framework; path = "Pods-HackerNewsReader.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B06900FB71F76C61D238D1D88C3430D2 /* EmptyKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EmptyKit.xcconfig; sourceTree = "<group>"; };
+		B122D87807400447E1BCBE8A3D001182 /* EmptyView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmptyView.swift; path = EmptyKit/EmptyView.swift; sourceTree = "<group>"; };
+		B1BB809FE12650A27468559FFA511383 /* EmptyKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EmptyKit-prefix.pch"; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B99965E3F4ED4EA20112E2434CE03194 /* ExpandableTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableTableViewController.swift; path = ExpandableTableViewController/Classes/ExpandableTableViewController.swift; sourceTree = "<group>"; };
+		C00B5B8C9495B61E61D0A069EB1FB511 /* Pods-HackerNewsReader-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HackerNewsReader-acknowledgements.plist"; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D89552DEADEDB59E6D14230AF7858486 /* ExpandableTableViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ExpandableTableViewController-prefix.pch"; sourceTree = "<group>"; };
+		D89B171002CC1BA48E56C07BABAC8762 /* EmptyKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EmptyKit-dummy.m"; sourceTree = "<group>"; };
+		E099E1C2177AF74AA5202AB64D2AEE0E /* ExpandableTableViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ExpandableTableViewController.framework; path = ExpandableTableViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAF792F9F9C490C7C089316D7517CC48 /* EmptyDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmptyDataSource.swift; path = EmptyKit/EmptyDataSource.swift; sourceTree = "<group>"; };
+		ECB99D75D55B73CC7BC540C7360CBA74 /* EmptyDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmptyDelegate.swift; path = EmptyKit/EmptyDelegate.swift; sourceTree = "<group>"; };
+		F09AAA16FAC79B6BB43BEB9F36570AA8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFD4E439DCACF51B84CD50CB39FD6FDE /* ExpandableTableViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ExpandableTableViewController.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E08A1266C73A1A2D2B3D3CB0F3551F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05DE1EC90D94C616210EA4D530BF9E98 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D28DEFB2FE36E5FE1AFC2A6F48DCC614 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F41C9EE401C468EF37768E29B0ED0F /* Foundation.framework in Frameworks */,
+				BC455DC759C23FEB53CD9BFAE043ECF8 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D887135C675AAB48D895BB062EEEBFF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E89D1DBBD406F5A7A9721AF1EC3482B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C613C320BC1FE35FDED15DEB883EC51 /* Pods-HackerNewsReader */ = {
+			isa = PBXGroup;
+			children = (
+				7875C91374CBE8589199551E706DCFE7 /* Info.plist */,
+				05DAF598462D192BEAEA13F3644F4643 /* Pods-HackerNewsReader.modulemap */,
+				56B843589A93865306940EBA9ABD4CE4 /* Pods-HackerNewsReader-acknowledgements.markdown */,
+				C00B5B8C9495B61E61D0A069EB1FB511 /* Pods-HackerNewsReader-acknowledgements.plist */,
+				8DA863EE365ADE0F599A9E7C936CECFC /* Pods-HackerNewsReader-dummy.m */,
+				A39ABF19FD42BF6C254301A3D5987435 /* Pods-HackerNewsReader-frameworks.sh */,
+				63BDA6FC8089295C2FA02AB3667B6FEB /* Pods-HackerNewsReader-resources.sh */,
+				79DC90A1A5DB8A78A899CAD240A9EDAD /* Pods-HackerNewsReader-umbrella.h */,
+				3E7F6831A8614F65AADBAB4BF03D00AB /* Pods-HackerNewsReader.debug.xcconfig */,
+				1191BE182E5E0B9A16581FF97512E73A /* Pods-HackerNewsReader.release.xcconfig */,
+			);
+			name = "Pods-HackerNewsReader";
+			path = "Target Support Files/Pods-HackerNewsReader";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5897F2847A8885CFF9995CD480305C14 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7423269562911069ADE1F70BDE62AEC /* EmptyKit */,
+				B021A621CBBE31A98B9DFC4CE40296C7 /* ExpandableTableViewController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5C43DCBDA998190455A63A6FBFE7525D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A542CBC652CA85C7E0B3894E24A632D7 /* ExpandableTableViewController.modulemap */,
+				FFD4E439DCACF51B84CD50CB39FD6FDE /* ExpandableTableViewController.xcconfig */,
+				307533F25E7A05DDD5195DA6C6863703 /* ExpandableTableViewController-dummy.m */,
+				D89552DEADEDB59E6D14230AF7858486 /* ExpandableTableViewController-prefix.pch */,
+				A43AD6ABFCBB04BCA083D9067D23B87E /* ExpandableTableViewController-umbrella.h */,
+				A0BBB9727AF56FE6467B7B6FF7BF3F7F /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ExpandableTableViewController";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				5897F2847A8885CFF9995CD480305C14 /* Pods */,
+				FD969E3DF16FB5333D9D79C12DEB88FD /* Products */,
+				A4B29FAEFC68C440A73269A03C9EF278 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A350228B70AF67D210D5958E214CE207 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				820B2DF87EA7447351A3CB7FF2D762F0 /* EmptyKit.modulemap */,
+				B06900FB71F76C61D238D1D88C3430D2 /* EmptyKit.xcconfig */,
+				D89B171002CC1BA48E56C07BABAC8762 /* EmptyKit-dummy.m */,
+				B1BB809FE12650A27468559FFA511383 /* EmptyKit-prefix.pch */,
+				812FD91F14944CB682026FCFB00AD176 /* EmptyKit-umbrella.h */,
+				F09AAA16FAC79B6BB43BEB9F36570AA8 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/EmptyKit";
+			sourceTree = "<group>";
+		};
+		A4B29FAEFC68C440A73269A03C9EF278 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C613C320BC1FE35FDED15DEB883EC51 /* Pods-HackerNewsReader */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B021A621CBBE31A98B9DFC4CE40296C7 /* ExpandableTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				190D9485F60D310FBAADB20F49B63E41 /* ArrayExtension.swift */,
+				B99965E3F4ED4EA20112E2434CE03194 /* ExpandableTableViewController.swift */,
+				47C39012E9BD73A27226A9836C0FB6A9 /* ExpandableTableViewDelegate.swift */,
+				5C43DCBDA998190455A63A6FBFE7525D /* Support Files */,
+			);
+			name = ExpandableTableViewController;
+			path = ExpandableTableViewController;
+			sourceTree = "<group>";
+		};
+		D7423269562911069ADE1F70BDE62AEC /* EmptyKit */ = {
+			isa = PBXGroup;
+			children = (
+				2282C725E9DC8251E23CC0C0085D53D6 /* Empty.swift */,
+				595AC68FD508AE4B8436EB8917CD1B9C /* Empty+Extensions.swift */,
+				EAF792F9F9C490C7C089316D7517CC48 /* EmptyDataSource.swift */,
+				ECB99D75D55B73CC7BC540C7360CBA74 /* EmptyDelegate.swift */,
+				B122D87807400447E1BCBE8A3D001182 /* EmptyView.swift */,
+				A350228B70AF67D210D5958E214CE207 /* Support Files */,
+			);
+			name = EmptyKit;
+			path = EmptyKit;
+			sourceTree = "<group>";
+		};
+		FD969E3DF16FB5333D9D79C12DEB88FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				602A9C565F8214155FDAB11CE465D8B6 /* EmptyKit.framework */,
+				E099E1C2177AF74AA5202AB64D2AEE0E /* ExpandableTableViewController.framework */,
+				AABD77013F69565A2E991DBC77DDCA18 /* Pods_HackerNewsReader.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1281BC265EE138C1E36AC1A03E8290A2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				798284F70B1F786DA70AC741E6E3188A /* Pods-HackerNewsReader-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CABBC40837A9C812F3A91E742E47418 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C8F986771229A713E1A0832241670B3 /* EmptyKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92170386E1CA95B2C3621D23E52316E7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F340DF040D6B903CB11B3A2A9255F3A /* ExpandableTableViewController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2B9D2931A650D7902DB02D11AAA2EEE5 /* Pods-HackerNewsReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C6B1C4818866796BF0BB8BD08CF1961 /* Build configuration list for PBXNativeTarget "Pods-HackerNewsReader" */;
+			buildPhases = (
+				7DCDBA5000FF27216997EC47DC4A1AE6 /* Sources */,
+				D887135C675AAB48D895BB062EEEBFF7 /* Frameworks */,
+				1281BC265EE138C1E36AC1A03E8290A2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E3534E3C1DC6556B93F6D526AB12C1D /* PBXTargetDependency */,
+				5B6F7E87A5710D50009C2A7F58C2861D /* PBXTargetDependency */,
+			);
+			name = "Pods-HackerNewsReader";
+			productName = "Pods-HackerNewsReader";
+			productReference = AABD77013F69565A2E991DBC77DDCA18 /* Pods_HackerNewsReader.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		51CCB5345D64B3D772D03C8E6472DE63 /* EmptyKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A8CDFF84D291F0254016AD0FD11C4EE /* Build configuration list for PBXNativeTarget "EmptyKit" */;
+			buildPhases = (
+				5CB97DC438844106A3A984B57D72D255 /* Sources */,
+				D28DEFB2FE36E5FE1AFC2A6F48DCC614 /* Frameworks */,
+				4CABBC40837A9C812F3A91E742E47418 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmptyKit;
+			productName = EmptyKit;
+			productReference = 602A9C565F8214155FDAB11CE465D8B6 /* EmptyKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		96AFA871D25A87F6FCCFED071D32EBC8 /* ExpandableTableViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E21423372BB0FB91C82EE1C1C60B08 /* Build configuration list for PBXNativeTarget "ExpandableTableViewController" */;
+			buildPhases = (
+				1D797B5E12A2270ED44480743E6990FE /* Sources */,
+				6E08A1266C73A1A2D2B3D3CB0F3551F6 /* Frameworks */,
+				92170386E1CA95B2C3621D23E52316E7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExpandableTableViewController;
+			productName = ExpandableTableViewController;
+			productReference = E099E1C2177AF74AA5202AB64D2AEE0E /* ExpandableTableViewController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = FD969E3DF16FB5333D9D79C12DEB88FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				51CCB5345D64B3D772D03C8E6472DE63 /* EmptyKit */,
+				96AFA871D25A87F6FCCFED071D32EBC8 /* ExpandableTableViewController */,
+				2B9D2931A650D7902DB02D11AAA2EEE5 /* Pods-HackerNewsReader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D797B5E12A2270ED44480743E6990FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AB06EE1B15D7CC54D0ABA09FAE8E375 /* ArrayExtension.swift in Sources */,
+				71C76D755AADC7FC5C4A4CC21C8CEF00 /* ExpandableTableViewController-dummy.m in Sources */,
+				FA9BC38CCE677FEF3954D044305D5F6F /* ExpandableTableViewController.swift in Sources */,
+				54016F2AB981D6FEF55C46299B60B839 /* ExpandableTableViewDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CB97DC438844106A3A984B57D72D255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60F63228EA97AFA228FC85CE1810CEA /* Empty+Extensions.swift in Sources */,
+				5BDB818981C13211FC99B195DCB9EA32 /* Empty.swift in Sources */,
+				181A93947D3E6A53AB27E7785E434C5C /* EmptyDataSource.swift in Sources */,
+				D36C12DCC8CCF959953180896B458BE9 /* EmptyDelegate.swift in Sources */,
+				74962F7453CDB1CCD3ABC3DDB56B5218 /* EmptyKit-dummy.m in Sources */,
+				6A3103BEBA71CAA47764A715A7A9A81C /* EmptyView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DCDBA5000FF27216997EC47DC4A1AE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CCC923C6EF900A2C9DF8E0D43AC47C6 /* Pods-HackerNewsReader-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B6F7E87A5710D50009C2A7F58C2861D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ExpandableTableViewController;
+			target = 96AFA871D25A87F6FCCFED071D32EBC8 /* ExpandableTableViewController */;
+			targetProxy = 2F76ABDCF495C821D6982701608FE864 /* PBXContainerItemProxy */;
+		};
+		9E3534E3C1DC6556B93F6D526AB12C1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EmptyKit;
+			target = 51CCB5345D64B3D772D03C8E6472DE63 /* EmptyKit */;
+			targetProxy = DE31948809A9DC3E8931852E9F73FF5B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09D3BAD9930F51F79ED794BCAA1A4EEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E7F6831A8614F65AADBAB4BF03D00AB /* Pods-HackerNewsReader.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HackerNewsReader/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HackerNewsReader/Pods-HackerNewsReader.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HackerNewsReader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		166E2CAC58E8608AD59A6F0B71C9C3E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		184893D7D577F93FABCACD4F01992D95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFD4E439DCACF51B84CD50CB39FD6FDE /* ExpandableTableViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ExpandableTableViewController/ExpandableTableViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ExpandableTableViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ExpandableTableViewController/ExpandableTableViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ExpandableTableViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		241F33B6ED4B51637940781A3BCAB7D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1191BE182E5E0B9A16581FF97512E73A /* Pods-HackerNewsReader.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HackerNewsReader/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HackerNewsReader/Pods-HackerNewsReader.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HackerNewsReader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		63BB784347DCC4B4D469E945412D61C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFD4E439DCACF51B84CD50CB39FD6FDE /* ExpandableTableViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ExpandableTableViewController/ExpandableTableViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ExpandableTableViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ExpandableTableViewController/ExpandableTableViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ExpandableTableViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7F150EDF74C85D3B546188D72598C484 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B06900FB71F76C61D238D1D88C3430D2 /* EmptyKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EmptyKit/EmptyKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EmptyKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EmptyKit/EmptyKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = EmptyKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		93540EA585370FC336939B4ED24F49B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B06900FB71F76C61D238D1D88C3430D2 /* EmptyKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EmptyKit/EmptyKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EmptyKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EmptyKit/EmptyKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = EmptyKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AA0B5BDEB018901CD8F88AAD05F5B893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E21423372BB0FB91C82EE1C1C60B08 /* Build configuration list for PBXNativeTarget "ExpandableTableViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184893D7D577F93FABCACD4F01992D95 /* Debug */,
+				63BB784347DCC4B4D469E945412D61C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C6B1C4818866796BF0BB8BD08CF1961 /* Build configuration list for PBXNativeTarget "Pods-HackerNewsReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09D3BAD9930F51F79ED794BCAA1A4EEE /* Debug */,
+				241F33B6ED4B51637940781A3BCAB7D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				166E2CAC58E8608AD59A6F0B71C9C3E0 /* Debug */,
+				AA0B5BDEB018901CD8F88AAD05F5B893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A8CDFF84D291F0254016AD0FD11C4EE /* Build configuration list for PBXNativeTarget "EmptyKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F150EDF74C85D3B546188D72598C484 /* Debug */,
+				93540EA585370FC336939B4ED24F49B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

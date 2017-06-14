@@ -1,0 +1,15 @@
+PODS:
+  - EmptyKit (3.1.2)
+  - ExpandableTableViewController (2.1)
+
+DEPENDENCIES:
+  - EmptyKit (~> 3.1.2)
+  - ExpandableTableViewController
+
+SPEC CHECKSUMS:
+  EmptyKit: 3f5ad697fc610a3bc460a59e00f23547b3afaa80
+  ExpandableTableViewController: 7a97b8cf60f044b588255a01176cafa5ce2b7438
+
+PODFILE CHECKSUM: c45773b8d5fb9fa99b31709a11a2e64abd966cf2
+
+COCOAPODS: 1.2.1
