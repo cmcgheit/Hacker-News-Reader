@@ -34,17 +34,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         fetchArticles()
         setupView()
-        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView(frame: .zero)
         
         self.automaticallyAdjustsScrollViewInsets = false
         
-    // Expandable View : self.expandableTableView.expandableDelegate = self
+        
+      //MARK: - Cell Padding
+       tableView.frame = UIEdgeInsetsInsetRect(tableView.frame, UIEdgeInsetsMake(10, 10, 10, 10))
+        
+    // MARK: - Expandable View
+    //self.expandableTableView.expandableDelegate = self
         
     // EmptyKit
     tableView.ept.dataSource = self as EmptyDataSource
     tableView.ept.delegate = self as EmptyDelegate
         
    
+    }
+    
+   //MARK: - Hiding Status Bar
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     // MARK : UIRefreshControl
@@ -147,18 +157,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath) as! ArticleCell
-        
-         cell.Title.text = self.articles?[indexPath.item].title
-         cell.Author.text = self.articles?[indexPath.item].author
-         cell.Desc.text = self.articles?[indexPath.item].desc
-        cell.Url.text = self.articles?[indexPath.item].url
-        
-        
-        return cell
-    }
-    
+
    func numberOfSections(in tableView: UITableView) -> Int {
     
    return 1
@@ -180,7 +179,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath) as! ArticleCell
+        
+        cell.Title.text = self.articles?[indexPath.item].title
+        cell.Author.text = self.articles?[indexPath.item].author
+        cell.Desc.text = self.articles?[indexPath.item].desc
+        cell.Url.text = self.articles?[indexPath.item].url
+        
+        
+        return cell
+    }
 }
+
+    
 
 // MARK - Extension: EmptySet Extension
 
