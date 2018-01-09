@@ -79,7 +79,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.isHidden = true
         
         // Helpers
-        let attributes = [ NSForegroundColorAttributeName : refreshControlTintColor ] as [String: Any]
+        let attributes = [ NSAttributedStringKey.foregroundColor.rawValue : refreshControlTintColor ] as [String: Any]
         
         // Configure Refresh Control
         refreshControl.tintColor = refreshControlTintColor
@@ -104,7 +104,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     // MARK: - Actions
-    func refreshHackerNewsData(sender: UIRefreshControl) {
+    @objc func refreshHackerNewsData(sender: UIRefreshControl) {
         fetchArticles()
     }
     
@@ -192,7 +192,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 }
 
-    
+      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      tableView.deselectRow(at: indexPath, animated: true)
+}
+
+
 
 // MARK - Extension: EmptySet Extension
 
@@ -205,14 +209,14 @@ extension UIViewController: EmptyDataSource {
     public func titleForEmpty(in view: UIView) -> NSAttributedString? {
         let title = "No News"
         let font = UIFont.systemFont(ofSize: 14)
-        let attributes: [String : Any] = [NSForegroundColorAttributeName: UIColor.black, NSFontAttributeName: font]
+        let attributes: [String : Any] = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.black, NSAttributedStringKey.font.rawValue: font]
         return NSAttributedString(string: title, attributes: attributes)
     }
     
     public func buttonTitleForEmpty(forState state: UIControlState, in view: UIView) -> NSAttributedString? {
         let title = "Empty Button"
         let font = UIFont.systemFont(ofSize: 17)
-        let attributes: [String : Any] = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: font]
+        let attributes: [String : Any] = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white, NSAttributedStringKey.font.rawValue: font]
         return NSAttributedString(string: title, attributes: attributes)
     }
     
