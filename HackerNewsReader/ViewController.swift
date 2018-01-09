@@ -79,7 +79,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.isHidden = true
         
         // Helpers
-        let attributes = [ NSAttributedStringKey.foregroundColor.rawValue : refreshControlTintColor ] as [String: Any]
+        let attributes: [NSAttributedStringKey : Any]? = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue) : refreshControlTintColor]
         
         // Configure Refresh Control
         refreshControl.tintColor = refreshControlTintColor
@@ -207,16 +207,17 @@ extension UIViewController: EmptyDataSource {
     }
     
     public func titleForEmpty(in view: UIView) -> NSAttributedString? {
-        let title = "No News"
+        let title = "no data"
         let font = UIFont.systemFont(ofSize: 14)
-        let attributes: [String : Any] = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.black, NSAttributedStringKey.font.rawValue: font]
+        let attributes: [NSAttributedStringKey : Any] = [.foregroundColor: UIColor.black, .font: font]
+        
         return NSAttributedString(string: title, attributes: attributes)
     }
     
     public func buttonTitleForEmpty(forState state: UIControlState, in view: UIView) -> NSAttributedString? {
         let title = "Empty Button"
         let font = UIFont.systemFont(ofSize: 17)
-        let attributes: [String : Any] = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white, NSAttributedStringKey.font.rawValue: font]
+        let attributes: [NSAttributedStringKey : Any] = [.foregroundColor: UIColor.white, .font: font]
         return NSAttributedString(string: title, attributes: attributes)
     }
     
