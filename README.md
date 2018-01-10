@@ -11,6 +11,7 @@ iOS Hacker News Reader app created with [NewsAPI](https://www.newsapi.org "NewsA
 - [x] [ExpandableTableViewController](https://github.com/enricmacias/ExpandableTableViewController "ExpandableTableViewController") (update included in official API version)
 - [x] Update to Swift 4
 
+
 ### Screenshots
 
 ![simulator screen shot jun 13 2017 8 40 08 pm](https://user-images.githubusercontent.com/24944725/27111893-f471d9b8-5078-11e7-8ea1-e050716b14ac.png)
