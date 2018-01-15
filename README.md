@@ -3,7 +3,9 @@
 iOS Hacker News Reader app created with [NewsAPI](https://www.newsapi.org "NewsAPI.org")
 
 ** Updated RxSwift version with the official [HackerNewsAPI](https://github.com/HackerNews/API)
+
 <img src="/Resources/Simulator Screen Shot - iPhone 7 - 2018-01-15 at 11.53.37.png" width="400" height="700" />
+
 *available in the app store soon*
 
 ### Things to Update
