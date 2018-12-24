@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import EmptyKit
+// import EmptyKit
 
- func valueForAPIKey(API_KEY:String) -> String {
+func valueForAPIKey(API_KEY:String) -> String {
     
     let filePath = Bundle.main.path(forResource: "Key", ofType: "plist")
     let plist = NSDictionary(contentsOfFile: filePath!)
@@ -18,7 +18,7 @@ import EmptyKit
     return value
 }
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageLabel: UILabel!
@@ -39,20 +39,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.automaticallyAdjustsScrollViewInsets = false
         
         
-      //MARK: - Cell Padding
-       tableView.frame = UIEdgeInsetsInsetRect(tableView.frame, UIEdgeInsetsMake(10, 10, 10, 10))
+        //MARK: - Cell Padding
+        tableView.frame = UIEdgeInsetsInsetRect(tableView.frame, UIEdgeInsetsMake(10, 10, 10, 10))
         
-    // MARK: - Expandable View
-    //self.expandableTableView.expandableDelegate = self
+        // MARK: - Expandable View
+        //self.expandableTableView.expandableDelegate = self
         
-    // EmptyKit
-    tableView.ept.dataSource = self as EmptyDataSource
-    tableView.ept.delegate = self as EmptyDelegate
+        // EmptyKit
+        //    tableView.ept.dataSource = self as EmptyDataSource
+        //    tableView.ept.delegate = self as EmptyDelegate
         
-   
     }
     
-   //MARK: - Hiding Status Bar
+    //MARK: - Hiding Status Bar
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -115,34 +114,34 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let task = URLSession.shared.dataTask(with: urlRequest)  { (data, response, error) in
             
-        if error != nil {
+            if error != nil {
                 print(error!)
                 return
             }
-        
+            
             self.articles = [Article] ()
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! [String: AnyObject]
                 
                 if let articlesFromJson = json["articles"] as? [[String:AnyObject]] {
                     for articleFromJson in articlesFromJson {
-                    let article = Article ()
+                        let article = Article ()
                         if let title = articleFromJson ["title"] as? String, let author = articleFromJson["author"] as? String, let desc = articleFromJson["description"] as? String, let url = articleFromJson["url"] as? String {
-                    
-                    article.author = author
-                    article.title = title
-                    article.desc = desc
-                    article.url = url
+                            
+                            article.author = author
+                            article.title = title
+                            article.desc = desc
+                            article.url = url
                         }
                         
                         self.articles?.append(article)
-                 }
-            }
+                    }
+                }
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
-            
-        
+                
+                
             } catch let error {
                 print(error)
             }
@@ -150,31 +149,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.updateView()
             self.refreshControl.endRefreshing()
             self.activityIndicatorView.stopAnimating()
-            
+        }
+        
+        task.resume()
+    }
 }
 
-    task.resume()
-        
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
-
-   func numberOfSections(in tableView: UITableView) -> Int {
-    
-   return 1
-
-   }
-    
-    
-   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.articles?.count ?? 0
-    
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         let webVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "web") as! WebView
-        
         webVC.url = self.articles?[indexPath.item].url
-        
         self.present(webVC, animated: true, completion: nil)
         
     }
@@ -192,49 +188,43 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 }
 
-      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      tableView.deselectRow(at: indexPath, animated: true)
-}
-
-
-
 // MARK - Extension: EmptySet Extension
 
-extension UIViewController: EmptyDataSource {
-    
-    public func imageForEmpty(in view: UIView) -> UIImage? {
-        return UIImage(named: "hackernews")
-    }
-    
-    public func titleForEmpty(in view: UIView) -> NSAttributedString? {
-        let title = "no data"
-        let font = UIFont.systemFont(ofSize: 14)
-        let attributes: [NSAttributedStringKey : Any] = [.foregroundColor: UIColor.black, .font: font]
-        
-        return NSAttributedString(string: title, attributes: attributes)
-    }
-    
-    public func buttonTitleForEmpty(forState state: UIControlState, in view: UIView) -> NSAttributedString? {
-        let title = "Empty Button"
-        let font = UIFont.systemFont(ofSize: 17)
-        let attributes: [NSAttributedStringKey : Any] = [.foregroundColor: UIColor.white, .font: font]
-        return NSAttributedString(string: title, attributes: attributes)
-    }
-    
-    public func buttonBackgroundColorForEmpty(in view: UIView) -> UIColor {
-        return UIColor.clear
-    }
-    
-}
-
-extension UIViewController: EmptyDelegate {
-    
-    public func emptyButton(_ button: UIButton, tappedIn view: UIView) {
-        print( #function, #line, type(of: self))
-    }
-    
-    public func emptyView(_ emptyView: UIView, tappedIn view: UIView) {
-        print( #function, #line, type(of: self))
-    }
-}
+//extension UIViewController: EmptyDataSource {
+//
+//    public func imageForEmpty(in view: UIView) -> UIImage? {
+//        return UIImage(named: "hackernews")
+//    }
+//
+//    public func titleForEmpty(in view: UIView) -> NSAttributedString? {
+//        let title = "no data"
+//        let font = UIFont.systemFont(ofSize: 14)
+//        let attributes: [NSAttributedStringKey : Any] = [.foregroundColor: UIColor.black, .font: font]
+//
+//        return NSAttributedString(string: title, attributes: attributes)
+//    }
+//
+//    public func buttonTitleForEmpty(forState state: UIControlState, in view: UIView) -> NSAttributedString? {
+//        let title = "Empty Button"
+//        let font = UIFont.systemFont(ofSize: 17)
+//        let attributes: [NSAttributedStringKey : Any] = [.foregroundColor: UIColor.white, .font: font]
+//        return NSAttributedString(string: title, attributes: attributes)
+//    }
+//
+//    public func buttonBackgroundColorForEmpty(in view: UIView) -> UIColor {
+//        return UIColor.clear
+//    }
+//
+//}
+//
+//extension UIViewController: EmptyDelegate {
+//
+//    public func emptyButton(_ button: UIButton, tappedIn view: UIView) {
+//        print( #function, #line, type(of: self))
+//    }
+//
+//    public func emptyView(_ emptyView: UIView, tappedIn view: UIView) {
+//        print( #function, #line, type(of: self))
+//    }
+//}
 

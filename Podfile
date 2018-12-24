@@ -6,7 +6,7 @@ target 'HackerNewsReader' do
   use_frameworks!
 
   # Pods for HackerNewsReader
-  pod 'EmptyKit'
+  # pod 'EmptyKit'
 
 #   post_install do |installer|
 #       installer.pods_project.targets.each do |target|
