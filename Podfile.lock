@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: daeb8ba877e3a3c36b67da727230adc6a96b670a
+PODS:
+  - EmptyKit (4.2.0)
+
+DEPENDENCIES:
+  - EmptyKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - EmptyKit
+
+SPEC CHECKSUMS:
+  EmptyKit: 95d75cad79476379124e929488116e409043c1d5
+
+PODFILE CHECKSUM: 983ebeea8852233094994ac9c789a05cb21404a5
 
 COCOAPODS: 1.5.2

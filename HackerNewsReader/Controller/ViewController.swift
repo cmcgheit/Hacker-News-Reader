@@ -7,7 +7,7 @@
 //
 
 import UIKit
-// import EmptyKit
+import EmptyKit
 
 func valueForAPIKey(API_KEY:String) -> String {
     
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         
         
         //MARK: - Cell Padding
-        tableView.frame = UIEdgeInsetsInsetRect(tableView.frame, UIEdgeInsetsMake(10, 10, 10, 10))
+        tableView.frame = tableView.frame.inset(by: UIEdgeInsets.init(top: 10, left: 10, bottom: 10, right: 10))
         
         // MARK: - Expandable View
         //self.expandableTableView.expandableDelegate = self
@@ -78,7 +78,7 @@ class ViewController: UIViewController {
         tableView.isHidden = true
         
         // Helpers
-        let attributes: [NSAttributedStringKey : Any]? = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue) : refreshControlTintColor]
+        let attributes: [NSAttributedString.Key : Any]? = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue) : refreshControlTintColor]
         
         // Configure Refresh Control
         refreshControl.tintColor = refreshControlTintColor
@@ -189,42 +189,41 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 // MARK - Extension: EmptySet Extension
+extension UIViewController: EmptyDataSource {
+    
+    public func imageForEmpty(in view: UIView) -> UIImage? {
+        return UIImage(named: "hackernews")
+    }
+    
+    public func titleForEmpty(in view: UIView) -> NSAttributedString? {
+        let title = "no data"
+        let font = UIFont.systemFont(ofSize: 14)
+        let attributes: [NSAttributedString.Key : Any] = [.foregroundColor: UIColor.black, .font: font]
+        
+        return NSAttributedString(string: title, attributes: attributes)
+    }
+    
+    public func buttonTitleForEmpty(forState state: UIControl.State, in view: UIView) -> NSAttributedString? {
+        let title = "Empty Button"
+        let font = UIFont.systemFont(ofSize: 17)
+        let attributes: [NSAttributedString.Key : Any] = [.foregroundColor: UIColor.white, .font: font]
+        return NSAttributedString(string: title, attributes: attributes)
+    }
+    
+    public func buttonBackgroundColorForEmpty(in view: UIView) -> UIColor {
+        return UIColor.clear
+    }
+    
+}
 
-//extension UIViewController: EmptyDataSource {
-//
-//    public func imageForEmpty(in view: UIView) -> UIImage? {
-//        return UIImage(named: "hackernews")
-//    }
-//
-//    public func titleForEmpty(in view: UIView) -> NSAttributedString? {
-//        let title = "no data"
-//        let font = UIFont.systemFont(ofSize: 14)
-//        let attributes: [NSAttributedStringKey : Any] = [.foregroundColor: UIColor.black, .font: font]
-//
-//        return NSAttributedString(string: title, attributes: attributes)
-//    }
-//
-//    public func buttonTitleForEmpty(forState state: UIControlState, in view: UIView) -> NSAttributedString? {
-//        let title = "Empty Button"
-//        let font = UIFont.systemFont(ofSize: 17)
-//        let attributes: [NSAttributedStringKey : Any] = [.foregroundColor: UIColor.white, .font: font]
-//        return NSAttributedString(string: title, attributes: attributes)
-//    }
-//
-//    public func buttonBackgroundColorForEmpty(in view: UIView) -> UIColor {
-//        return UIColor.clear
-//    }
-//
-//}
-//
-//extension UIViewController: EmptyDelegate {
-//
-//    public func emptyButton(_ button: UIButton, tappedIn view: UIView) {
-//        print( #function, #line, type(of: self))
-//    }
-//
-//    public func emptyView(_ emptyView: UIView, tappedIn view: UIView) {
-//        print( #function, #line, type(of: self))
-//    }
-//}
+extension UIViewController: EmptyDelegate {
+    
+    public func emptyButton(_ button: UIButton, tappedIn view: UIView) {
+        print( #function, #line, type(of: self))
+    }
+    
+    public func emptyView(_ emptyView: UIView, tappedIn view: UIView) {
+        print( #function, #line, type(of: self))
+    }
+}
 
