@@ -261,7 +261,7 @@ internal extension EmptyView {
         }
         
         // Assign the vertical constraints to the content view
-        if (verticalFormat.characters.count > 0) {
+        if (verticalFormat.count > 0) {
             contentView.addConstraints(withVisualFormat: "V:|\(verticalFormat)|", metrics: metrics, views: views)
         }
     }
@@ -313,13 +313,13 @@ private extension EmptyView {
 extension UIView {
     
     func addConstraints(withVisualFormat format: String, metrics: [String : Any]?, views: [String : Any]) {
-        let noLayoutOptions = NSLayoutFormatOptions(rawValue: 0)
+        let noLayoutOptions = NSLayoutConstraint.FormatOptions(rawValue: 0)
         let constraints = NSLayoutConstraint.constraints(withVisualFormat: format, options: noLayoutOptions, metrics: metrics, views: views)
         self.addConstraints(constraints)
     }
     
     @discardableResult
-    func addEquallyRelatedConstraint(with view: UIView, attribute: NSLayoutAttribute) -> NSLayoutConstraint {
+    func addEquallyRelatedConstraint(with view: UIView, attribute: NSLayoutConstraint.Attribute) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: view, attribute: attribute, relatedBy: .equal, toItem: self, attribute: attribute, multiplier: 1, constant: 0)
         self.addConstraint(constraint)
         return constraint

@@ -19,5 +19,4 @@ class WebView: UIViewController {
 
         webview.loadRequest(URLRequest(url: URL(string: url!)!))
     }
-
 }
