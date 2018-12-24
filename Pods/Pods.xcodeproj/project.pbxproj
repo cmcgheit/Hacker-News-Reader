@@ -32,7 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0327C5EE1F3830C65339A63BE7B1B82A /* EmptyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EmptyKit.framework; path = EmptyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0327C5EE1F3830C65339A63BE7B1B82A /* EmptyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EmptyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FFFC0CC98DC89FCA60954C88E123B7F /* Pods-HackerNewsReader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HackerNewsReader-dummy.m"; sourceTree = "<group>"; };
 		16A333AD6287EF86E6AE8E9E2975A0BB /* Pods-HackerNewsReader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HackerNewsReader.modulemap"; sourceTree = "<group>"; };
 		1E89AAF03614C7FDF50407AA9AED0211 /* Empty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Empty.swift; path = EmptyKit/Empty.swift; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 		63AB0F145079508AB988924EFB942A9E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		93A3C3772A35AB19DC8661652F9CE68A /* Pods-HackerNewsReader-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HackerNewsReader-resources.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		98BB3A04073ACDD0181C328FFBA88587 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A39021C408C4844D617F1062B7D8C11A /* EmptyView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmptyView.swift; path = EmptyKit/EmptyView.swift; sourceTree = "<group>"; };
 		A7066669B8302E99B0BE16A32E340B1F /* EmptyKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EmptyKit-dummy.m"; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		C1CF9EBA5271617A4B83002AFB937A2B /* Pods-HackerNewsReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HackerNewsReader.release.xcconfig"; sourceTree = "<group>"; };
 		D88550BE4511961813C1F1C60B46DDD8 /* EmptyKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EmptyKit-prefix.pch"; sourceTree = "<group>"; };
 		EA857483B2EC7ED40B505465E3F63BA8 /* Pods-HackerNewsReader-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HackerNewsReader-acknowledgements.plist"; sourceTree = "<group>"; };
-		F52AE545DB54E01835CABB6A34AC23D3 /* Pods_HackerNewsReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HackerNewsReader.framework; path = "Pods-HackerNewsReader.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F52AE545DB54E01835CABB6A34AC23D3 /* Pods_HackerNewsReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackerNewsReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0D849DF50E007BB29F1FF57D1E9273 /* EmptyDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmptyDataSource.swift; path = EmptyKit/EmptyDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,7 +150,6 @@
 				A39021C408C4844D617F1062B7D8C11A /* EmptyView.swift */,
 				5F946D795AEAF6442D2F3AC08D923CF2 /* Support Files */,
 			);
-			name = EmptyKit;
 			path = EmptyKit;
 			sourceTree = "<group>";
 		};
@@ -245,6 +244,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					51CCB5345D64B3D772D03C8E6472DE63 = {
+						LastSwiftMigration = 1010;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -359,7 +363,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -512,7 +516,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
